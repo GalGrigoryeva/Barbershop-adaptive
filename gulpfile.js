@@ -6,3 +6,9 @@ gulp.task("less", function() {
   .pipe(less())
   .pipe(gulp.dest("css"));
 });
+
+gulp.task("watch", function() {
+  gulp.watch('less/**', function(event) {
+      gulp.run('less');
+  });
+});
