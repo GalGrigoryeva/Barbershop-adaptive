@@ -1,0 +1,21 @@
+{
+  "name": "Barbershop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Проект «Барбершоп» от HTML Academy",
+  "author": "Galina Grigoryeva",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:GalGrigoryeva/Barbershop-adaptive.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GalGrigoryeva/Barbershop-adaptive/issues"
+  },
+  "homepage": "https://github.com/GalGrigoryeva/Barbershop-adaptive",
+ "devDependencies": {
+
+  },
+  "scripts": {
+
+  }
+}
