@@ -12,10 +12,8 @@
     "url": "https://github.com/GalGrigoryeva/Barbershop-adaptive/issues"
   },
   "homepage": "https://github.com/GalGrigoryeva/Barbershop-adaptive",
- "devDependencies": {
-
+  "devDependencies": {
+    "gulp-less": "^3.3.0"
   },
-  "scripts": {
-
-  }
+  "scripts": {}
 }
