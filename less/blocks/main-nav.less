@@ -1,0 +1,55 @@
+.main-nav{
+  width: 320px;
+  margin: 0 auto;
+}
+
+.main-nav__list,
+.main-nav__user-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-nav__list {
+  min-height: 255px; /*Временно для сетки*/
+}
+
+.main-nav__user-list {
+  min-height: 55px; /*Временно для сетки*/
+}
+
+@media @tablet-widths {
+  .main-nav {
+    width: auto;
+    min-height: 70px;
+    margin: 0;
+  }
+
+  .main-nav__wrapper {
+    .container();
+    .clearfix();
+  }
+
+  .main-nav__list {
+    float: left;
+    width: 570px;
+    min-height: 70px; /*Временно для сетки*/
+  }
+
+  .main-nav__user-list {
+    float: right;
+    width: 60px;
+    min-height: 70px; /*Временно для сетки*/
+  }
+}
+
+@media @desktop-widths {
+  .main-nav__list {
+    width: 760px;
+  }
+
+  .main-nav__user-list {
+    width: 160px;
+  }
+}

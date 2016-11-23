@@ -1,0 +1,34 @@
+.page-header {
+  min-height: 395px; /*временно для сетки*/
+}
+
+.page-header__logo {
+  height: 85px;
+}
+
+@media @tablet-widths {
+  .page-header {
+    position: relative;
+
+    min-height: 70px; /*минимальная высота содержания*/
+    padding-bottom: 400px;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media @desktop-widths {
+  .page-header {
+    padding-bottom: 649px;
+  }
+
+  .page-header__logo {
+    height: 649px;
+  }
+}
