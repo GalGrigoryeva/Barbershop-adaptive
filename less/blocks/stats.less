@@ -1,5 +1,5 @@
 .stats {
-  .container();
+  .container-fluid();
 }
 
 .stats__header {
@@ -117,12 +117,17 @@
   }
 
   .stats__header {
-    .clearfix();
+    /* .clearfix(); */
 
     position: relative;
 
-    min-height: 129px;
-    padding: 31px 0 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* min-height: 129px; */
+    padding: 31px 40px;
+    padding-bottom: 24px;
 
     &::before {
       content: "";
@@ -137,9 +142,10 @@
   }
 
   .stats__slogan {
-    float: left;
-    width: 280px;
-    padding-left: 40px;
+    width: 50%;
+    /* float: left; */
+    /* width: 280px; */
+    /* padding-left: 40px; */
     margin-bottom: 20px;
 
     font-size: 40px;
@@ -149,23 +155,27 @@
   }
 
   .stats__intro {
-    float: right;
-    width: 210px;
+    /* float: right; */
+    /* width: 210px; */
+    /* padding-right: 80px; */
+
+    width: 37.5%;
     padding: 0;
     padding-top: 4px;
-    padding-right: 80px;
 
     text-align: left;
   }
 
   .stats__legend--top {
-      display: block;
-      float: left;
-      clear: left;
-      width: 280px;
-      padding-left: 40px;
+    /* float: left; */
+    /* clear: left; */
+    /* width: 280px; */
+    /* padding-left: 40px; */
 
-      color: rgba(0, 0, 0, 0.3);
+    display: block;
+    width: 50%;
+
+    color: rgba(0, 0, 0, 0.3);
   }
 
   .stats__legend--bottom {
@@ -173,15 +183,25 @@
   }
 
   .stats__table {
-    .clearfix();
+    /* .clearfix(); */
 
     display: block;
   }
 
+  .stats__table tbody {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .stats__table tr {
+    /* float: left; */
+    /* width: 250px; */
+
     display: block;
-    float: left;
-    width: 250px;
+
+    box-sizing: border-box; /*или вместо box-sizing и width*/
+    width: 50%;             /*flex-basis: 250px; flex-grow: 1;*/
+                            /* но учесть последний нечетный елемент в таблице - он растянется*/
     padding: 25px 35px;
     padding-bottom: 28px;
   }
@@ -213,13 +233,17 @@
 
 @media @desktop-widths {
   .stats {
-    .clearfix();
+    /* .clearfix(); */
+
+    display: flex;
 
     margin-top: -159px;
   }
 
   .stats__header {
-    float: left;
+    /* float: left; */
+    flex-grow: 1;
+    flex-direction: column;
     width: 240px;
     min-height: 263px; /*Временно для сетки*/
     padding-left: 40px;
@@ -231,28 +255,31 @@
   }
 
   .stats__slogan {
-    float: none;
+    /* float: none; */
     width: auto;
     margin-bottom: 42px;
-    padding-left: 0;
+    /* padding-left: 0; */
   }
 
   .stats__intro {
-    float: none;
+    /* float: none; */
     width: auto;
     margin-bottom: 32px;
-    padding: 0;
+    /* padding: 0; */
   }
 
   .stats__legend--top {
-    float: none;
+    /* float: none; */
     width: auto;
-    padding-left: 0;
+    /* padding-left: 0; */
+    margin-top: auto;
   }
 
   .stats__table {
-    float: right;
-    display: block;
+    /* float: right; */
+    /* display: block; */
+    display: flex;
+    flex-grow: 1;
     width: 640px;
   }
 }
