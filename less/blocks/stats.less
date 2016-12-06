@@ -1,4 +1,10 @@
 .stats {
+  width: auto;
+
+  background-color: #353535;
+}
+
+.stats__wrapper {
   .container-fluid();
 }
 
@@ -109,7 +115,7 @@
 }
 
 @media @tablet-widths {
-  .stats {
+  .stats__wrapper {
     position: relative;
     z-index: 1;
 
@@ -126,14 +132,14 @@
     flex-wrap: wrap;
 
     /* min-height: 129px; */
-    padding: 31px 40px;
-    padding-bottom: 24px;
+    padding: 32px 40px;
+    padding-bottom: 32px;
 
     &::before {
       content: "";
       position: absolute;
       top: 27px;
-      left: -15px;
+      left: -14px;
 
       border: 15px solid transparent;
       border-bottom-color: #ffffff;
@@ -216,6 +222,7 @@
   .stats__value {
     margin-bottom: 7px;
 
+    font-weight: bold;
     font-size: 72px;
     line-height: 72px;
   }
@@ -232,12 +239,12 @@
 }
 
 @media @desktop-widths {
-  .stats {
+  .stats__wrapper {
     /* .clearfix(); */
 
     display: flex;
 
-    margin-top: -159px;
+    margin-top: -164px;
   }
 
   .stats__header {
