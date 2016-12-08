@@ -54,3 +54,43 @@ table {
 
   opacity: 0;
 }
+
+.btn {
+  display: block;
+  width: 158px;
+  height: 48px;
+
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 48px;
+
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+
+  background-color: #f8f5f2;
+
+  border: 1px solid #e5ddd5;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #d5cabe;
+  }
+
+  &:active {
+    color: #958c84;
+    border-color: #d5cabe;
+    background-color: #d5cabe;
+  }
+
+  &:disabled {
+    cursor: default;
+    color: #ffffff;
+    border-color: #aeaeae;
+    background-color: #aeaeae;
+  }
+}
