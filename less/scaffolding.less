@@ -49,6 +49,40 @@ table {
   overflow: hidden;
 }
 
+.slider {
+  position: relative;
+}
+
+.slider__toggles {
+  position: absolute;
+  height: 10px;
+
+  text-align: center;
+  font-size: 0;
+}
+
+.slider__toggle {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 23px;
+
+  vertical-align: top;
+
+  border: 1px solid #cccccc;
+
+  transform: rotate(45deg);
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.slider__item {
+  display: none;
+}
+
 .slider__input {
   position: absolute;
 
