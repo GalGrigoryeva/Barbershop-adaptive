@@ -757,6 +757,73 @@ table {
     padding-right: 10px;
   }
 }
+.inner-page {
+  color: #000000;
+  background-color: #f8f5f2;
+}
+.order {
+  padding-top: 30px;
+  padding-bottom: 39px;
+}
+.order__header {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 27px;
+}
+.order__slogan {
+  margin: 0;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .order__header {
+    text-align: center;
+  }
+  .order__to-main {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .order {
+    width: auto;
+    padding-top: 54px;
+    padding-bottom: 76px;
+  }
+  .order__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 67px;
+  }
+  .order__slogan {
+    padding-top: 8px;
+    font-size: 40px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .order {
+    width: 84%;
+    /*640px / 768px ~= 84%*/
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  .order {
+    width: 80%;
+    /*960px / 1200px = 80%*/
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .order {
+    padding-top: 58px;
+    padding-bottom: 87px;
+  }
+}
 .page-footer {
   background-color: #292929;
 }
