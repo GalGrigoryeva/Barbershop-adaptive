@@ -47,18 +47,20 @@
             <input class="order-form__field  order-form__field--name" type="text" name="patronymic" placeholder="Отчество">
           </div>
           <div class="order-form__communications">
-            <input class="order-form__field  order-form__field--communications" type="tel" name="surname" placeholder="Контактный телефон" required>
-            <input class="order-form__field  order-form__field--communications" type="email" name="name" placeholder="Контактный e-mail" required>
+            <input class="order-form__field  order-form__field--communications" type="tel" name="tel" placeholder="Контактный телефон" required>
+            <input class="order-form__field  order-form__field--communications" type="email" name="email" placeholder="Контактный e-mail" required>
           </div>
           <div class="order-form__information">
-            <textarea class="order-form-field  order-form__field--information" name="info-for-master" placeholder="Доп. информация для мастера"></textarea>
+            <textarea class="order-form__field  order-form__field--information" name="info-for-master" placeholder="Доп. информация для мастера" rows="5"></textarea>
           </div>
         </div>
         <div class="order-form__beard-model">
-          <b class="order-form__title">Выберите модель бороды:</b>
+          <div class="order-form__title">
+            <b>Выберите модель бороды:</b>
+          </div>
           <ul class="order-form__list  order-form__list--model">
             <li>
-              <input class="order-form__field  order-form__field--model" type="radio" name="model" id="admiral">
+              <input class="order-form__field  order-form__field--model checked" type="radio" name="model" id="admiral">
               <label class="order-form__label  order-form__label--model" for="admiral">адмирал</label>
               <img src="img/beard-1.svg" width="52" height="49" alt="Стиль «Адмирал»">
             </li>
@@ -85,7 +87,9 @@
           </ul>
         </div>
         <div class="order-form__additional-service">
-          <b class="order-form__title">Дополнительные услуги:</b>
+          <div class="order-form__title">
+            <b>Дополнительные услуги:</b>
+          </div>
           <ul class="order-form__list  order-form__list--additional">
             <li>
               <input class="order-form__field  order-form__field--additional" type="checkbox" name="additional" id="color-beard">
