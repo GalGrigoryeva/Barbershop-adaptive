@@ -96,6 +96,10 @@ table {
   border-color: #aeaeae;
   background-color: #aeaeae;
 }
+.inner-page {
+  color: #000000;
+  background-color: #f8f5f2;
+}
 .advantages__wrapper {
   width: auto;
   padding-top: 30px;
@@ -1267,10 +1271,6 @@ table {
     margin-bottom: 66px;
   }
 }
-.inner-page {
-  color: #000000;
-  background-color: #f8f5f2;
-}
 .order {
   padding-top: 30px;
   padding-bottom: 39px;
@@ -1291,7 +1291,7 @@ table {
   .order__header {
     text-align: center;
   }
-  .order__to-main {
+  .btn--home {
     display: none;
   }
 }
@@ -1680,11 +1680,239 @@ table {
     bottom: 438px;
   }
 }
+.portfolio {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 34px;
+  padding-top: 30px;
+}
+.portfolio__header {
+  margin-bottom: 27px;
+}
+.portfolio__slogan {
+  margin: 0;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .portfolio__header {
+    text-align: center;
+  }
+  .btn--home {
+    display: none;
+  }
+}
+.portfolio__item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border: 1px solid #e5ddd5;
+}
+.portfolio__item:nth-last-child(1) {
+  margin-bottom: 0;
+}
+.portfolio__month-tag {
+  position: absolute;
+  left: -1px;
+  top: 400px;
+  width: 152px;
+  height: 50px;
+  padding-left: 24px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #826550;
+}
+.portfolio__item--work-of-month .portfolio__foto {
+  margin-bottom: 20px;
+}
+.portfolio__foto {
+  display: block;
+  margin-top: -1px;
+  margin-left: -1px;
+  margin-bottom: 25px;
+}
+.portfolio__item_name {
+  padding-left: 22px;
+  padding-right: 32px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.portfolio__feedback {
+  margin-bottom: 24px;
+  padding-left: 22px;
+  padding-right: 32px;
+}
+.portfolio__service-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.portfolio__service-item {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  padding-left: 46px;
+  font-size: 16px;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+.portfolio__service-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.portfolio__service-item:nth-last-child(1) {
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .portfolio {
+    width: auto;
+    padding-top: 95px;
+  }
+  .portfolio__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 38px;
+  }
+  .portfolio__slogan {
+    padding-top: 8px;
+    font-size: 40px;
+  }
+  .portfolio__item {
+    display: flex;
+    height: 292px;
+    margin-bottom: 41px;
+    padding-bottom: 0;
+  }
+  .portfolio__month-tag {
+    left: -3px;
+    top: 34px;
+  }
+  .portfolio__item--work-of-month {
+    height: 398px;
+  }
+  .portfolio__item--work-of-month .portfolio__foto {
+    margin-bottom: 0;
+  }
+  .portfolio__item--work-of-month .portfolio__desc {
+    padding-right: 40px;
+  }
+  .portfolio__foto {
+    margin-right: 6.5%;
+    /* 50 / 768 ~= 6.5% */
+    margin-bottom: 0;
+    vertical-align: top;
+  }
+  .portfolio__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    padding-right: 80px;
+    padding-top: 40px;
+  }
+  .portfolio__item_name {
+    padding: 0;
+  }
+  .portfolio__feedback {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    padding: 0;
+  }
+  .portfolio__service-list {
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .portfolio {
+    width: 84%;
+    /*640px / 768px ~= 84%*/
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  .portfolio {
+    width: 80%;
+    /*960px / 1200px = 80%*/
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 79px;
+    padding-top: 120px;
+  }
+  .portfolio__header {
+    width: 100%;
+    margin-bottom: 79px;
+  }
+  .portfolio__item {
+    flex-direction: column;
+    width: 292px;
+    height: 539px;
+    margin: 0;
+  }
+  .portfolio__month-tag {
+    left: auto;
+    right: -1px;
+    top: 30px;
+    padding-right: 18px;
+    padding-left: 0;
+    text-align: right;
+  }
+  .portfolio__item--work-of-month {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 41px;
+  }
+  .portfolio__item--work-of-month .portfolio__foto {
+    margin-bottom: 0;
+    margin-right: 4.43%;
+    /* 34 / 768 ~= 4.43% */
+  }
+  .portfolio__item--work-of-month .portfolio__desc {
+    margin-top: 130px;
+    padding: 0;
+    padding-right: 130px;
+  }
+  .portfolio__item--work-of-month .portfolio__service-list {
+    position: static;
+  }
+  .portfolio__foto {
+    margin: 0;
+    margin-bottom: 34px;
+  }
+  .portfolio__desc {
+    padding: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .portfolio__service-list {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+  }
+}
 .price {
-  margin: 50px auto;
+  margin-left: auto;
+  margin-right: auto;
   color: #ffffff;
   background-color: #353535;
   box-shadow: 0 0 5px #666666;
+  padding-bottom: 19px;
 }
 .price__wrapper {
   width: 320px;
@@ -1766,6 +1994,10 @@ table {
   border-radius: 50%;
 }
 @media (min-width: 768px) {
+  .price {
+    margin-top: 62px;
+    padding-bottom: 56px;
+  }
   .price__title {
     margin-bottom: 50px;
     font-size: 40px;
@@ -1821,6 +2053,10 @@ table {
   }
 }
 @media (min-width: 1200px) {
+  .price {
+    margin-top: 0;
+    padding-bottom: 85px;
+  }
   .price__columns {
     display: flex;
     justify-content: space-between;
