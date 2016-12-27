@@ -1,18 +1,20 @@
 .price {
-  margin: 50px auto;
   color: #ffffff;
   background-color: #353535;
   box-shadow: 0 0 5px #666666;
+  padding-top: 70px;
+  padding-bottom: 19px;
 }
 
 .price__wrapper {
-  .container();
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .price__title {
   display: block;
-  margin-top: 0;
-  margin-bottom: 27px;
+  margin-bottom: 23px;
+
   font-size: 30px;
   line-height: 1;
   text-align: center;
@@ -21,6 +23,8 @@
 
 .price__table {
   display: block;
+  margin-bottom: 30px;
+
   font-size: 20px;
   line-height: 27px;
 
@@ -33,7 +37,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   td {
@@ -63,33 +67,46 @@
 
 .price__discount {
   position: relative;
-  height: 90px;
-  margin-top: 25px;
-  padding: 30px 10px;
+  height: 48px;
+  padding: 20px 10px;
   padding-left: 110px;
-  border: 2px solid #5e5e5e;
+
+  border: 1px solid #4a4a4a;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 57px;
+    height: 57px;
+    transform: translateY(-50%);
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+  }
 }
 
 .price__discount-desc {
   margin: 0;
   padding: 0;
-}
+  padding-right: 45px;
 
-.price__discount::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  width: 57px;
-  height: 57px;
-  transform: translateY(-50%);
-  border: 2px solid #ffffff;
-  border-radius: 50%;
+  font-size: 20px;
 }
 
 @media @tablet-widths {
+  .price {
+    padding-top: 85px;
+    padding-bottom: 56px;
+  }
+
+  .price__wrapper {
+    .container-fluid();
+  }
+
   .price__title {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+
     font-size: 40px;
     text-align: left;
   }
@@ -97,6 +114,7 @@
   .price__table {
     display: table;
     width: 100%;
+    margin-bottom: 10px;
 
     tbody {
       display: table-row-group;
@@ -109,25 +127,36 @@
     td {
       display: table-cell;
       padding: 12px 19px;
+      box-sizing: border-box;
+
       vertical-align: top;
-      border: 2px solid #5e5e5e;
+
+      border: 1px solid #4a4a4a;
+
+      &:first-child {
+        text-align: center;
+      }
     }
 
     .price__col-1 {
       display: table-cell;
+      width: 9%; /* 72 / 768 = 9.375% */
     }
 
     .price__col-2 {
-      padding: 12px 19px;
+      width: 32%; /* 250 / 768 ~= 32.55% */
+      padding: 12px 18px;
     }
 
     .price__col-3 {
       width: auto;
-      padding: 12px 19px;
+      width: 20%; /* 160 / 768 ~= 20.83% */
+      padding: 12px 18px;
     }
 
     .price__col-4 {
-      padding: 12px 19px;
+      width: 19%; /* 160 / 768 ~= 20.83% */
+      padding: 12px 18px;
     }
 
     .price__bkt {
@@ -136,25 +165,33 @@
   }
 
   .price__discount {
-    height: 120px;
-    margin-top: 10px;
-    padding: 45px 10px;
-    padding-left: 105px;
-    font-size: 30px;
-    line-height: 27px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
+    height: 41px;
+    padding: 40px 10px 37px;
+    padding-left: 180px;
+
+    &::before {
+      left: 27px;
+      width: 75px;
+      height: 75px;
+    }
   }
 
-  .price__discount::before {
-    left: 27px;
-    width: 75px;
-    height: 75px;
+  .price__discount-desc {
+    padding: 0;
+
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
   }
 }
 
 @media @desktop-widths {
+  .price {
+    padding-top: 75px;
+    padding-bottom: 85px;
+  }
+
   .price__columns {
     display: flex;
     justify-content: space-between;
@@ -163,6 +200,7 @@
 
   .price__table {
     width: 630px;
+    margin: 0;
   }
 
   .price__discount {
@@ -171,17 +209,21 @@
     margin: 0;
     padding: 10px 50px;
     padding-top: 190px;
-    font-size: 20px;
-    line-height: 27px;
-    text-transform: none;
-    font-weight: normal;
+
+    &::before {
+      top: 25px;
+      left: 50%;
+      width: 140px;
+      height: 140px;
+      transform: translateY(0) translateX(-50%);
+    }
   }
 
-  .price__discount::before {
-    top: 25px;
-    left: 50%;
-    width: 140px;
-    height: 140px;
-    transform: translateY(0) translateX(-50%);
+  .price__discount-desc {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 27px;
+    text-transform: none;
+    text-align: center;
   }
 }
