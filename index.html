@@ -12,7 +12,11 @@
   <header class="page-header">
     <h1 class="visually-hidden">Барбершоп «Бородинский» — истинно мужская классика</h1>
     <div class="page-header__logo">
-      <img src="img/logotype-mobile.svg" width="370" height="153" alt="Барбершоп «Бородинский»">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
+        <img src="img/logotype-mobile.svg" width="370" height="153" alt="Барбершоп «Бородинский»">
+      </picture>
     </div>
     <nav class="main-nav  main-nav--closed  main-nav--nojs">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
