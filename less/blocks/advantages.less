@@ -13,6 +13,7 @@
 }
 
 .advantages__item {
+  position: relative;
   padding: 0 40px;
   padding-top: 125px;
 
@@ -21,6 +22,43 @@
 
     font-size: 20px;
     text-align: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 95px;
+
+    background-repeat: no-repeat;
+  }
+}
+
+.advantages__item--fast {
+  &::before {
+    height: 94px;
+    margin-left: -47px;
+
+    background-image: url("../../img/advantage-1-illustration.svg");
+  }
+}
+
+.advantages__item--awesome {
+  &::before {
+    height: 88px;
+    margin-left: -44px;
+
+    background-image: url("../../img/advantage-2-illustration.svg");
+  }
+}
+
+.advantages__item--expensive {
+  &::before {
+    height: 91px;
+    margin-left: -45.5px;
+
+    background-image: url("../../img/advantage-3-illustration.svg");
   }
 }
 
@@ -82,7 +120,7 @@
 
   .advantages__item {
     position: relative;
-
+    display: block;
     margin: 0 30px;
     margin-bottom: 40px;
     padding: 0;
@@ -91,6 +129,14 @@
 
     p {
       text-align: left;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      &::after {
+        content: none;
+      }
     }
 
     &::after {
@@ -104,17 +150,10 @@
 
       background-color: #4a4a4a;
     }
-  }
 
-  .advantages__item {
-    display: block;
-  }
-
-  .advantages__item:last-child {
-    margin-bottom: 0;
-
-    &::after {
-      content: none;
+    &::before {
+      left: 0;
+      margin: 0;
     }
   }
 
@@ -146,19 +185,41 @@
     padding: 0 40px;
     padding-top: 130px;
 
+    border-right: 1px solid #4a4a4a;
+
+    &:nth-child(2) {
+      width: 200px;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
     &::after {
       content: none;
     }
+
+    &::before {
+      left: 50%;
+    }
   }
 
-  .advantages__item {
-    display: table-cell;
+  .advantages__item--fast {
+    &::before {
+      margin-left: -47px;
+    }
   }
 
-  .advantages__item:nth-child(2) {
-    width: 200px;
-    padding-left: 60px;
-    padding-right: 60px;
+  .advantages__item--awesome {
+    &::before {
+      margin-left: -44px;
+    }
+  }
+
+  .advantages__item--expensive {
+    border-right: none;
+
+    &::before {
+      margin-left: -45.5px;
+    }
   }
 
   .advantages__item-title {
