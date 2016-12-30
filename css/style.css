@@ -130,6 +130,7 @@ table {
   list-style: none;
 }
 .advantages__item {
+  position: relative;
   padding: 0 40px;
   padding-top: 125px;
 }
@@ -137,6 +138,29 @@ table {
   margin: 0;
   font-size: 20px;
   text-align: center;
+}
+.advantages__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 95px;
+  background-repeat: no-repeat;
+}
+.advantages__item--fast::before {
+  height: 94px;
+  margin-left: -47px;
+  background-image: url("../../img/advantage-1-illustration.svg");
+}
+.advantages__item--awesome::before {
+  height: 88px;
+  margin-left: -44px;
+  background-image: url("../../img/advantage-2-illustration.svg");
+}
+.advantages__item--expensive::before {
+  height: 91px;
+  margin-left: -45.5px;
+  background-image: url("../../img/advantage-3-illustration.svg");
 }
 .advantages__item-title {
   margin: 0;
@@ -184,6 +208,7 @@ table {
   }
   .advantages__item {
     position: relative;
+    display: block;
     margin: 0 30px;
     margin-bottom: 40px;
     padding: 0;
@@ -192,6 +217,12 @@ table {
   }
   .advantages__item p {
     text-align: left;
+  }
+  .advantages__item:last-child {
+    margin-bottom: 0;
+  }
+  .advantages__item:last-child::after {
+    content: none;
   }
   .advantages__item::after {
     content: "";
@@ -202,14 +233,9 @@ table {
     height: 1px;
     background-color: #4a4a4a;
   }
-  .advantages__item {
-    display: block;
-  }
-  .advantages__item:last-child {
-    margin-bottom: 0;
-  }
-  .advantages__item:last-child::after {
-    content: none;
+  .advantages__item::before {
+    left: 0;
+    margin: 0;
   }
   .advantages__item-title {
     text-align: left;
@@ -234,17 +260,30 @@ table {
     margin: 0;
     padding: 0 40px;
     padding-top: 130px;
-  }
-  .advantages__item::after {
-    content: none;
-  }
-  .advantages__item {
-    display: table-cell;
+    border-right: 1px solid #4a4a4a;
   }
   .advantages__item:nth-child(2) {
     width: 200px;
     padding-left: 60px;
     padding-right: 60px;
+  }
+  .advantages__item::after {
+    content: none;
+  }
+  .advantages__item::before {
+    left: 50%;
+  }
+  .advantages__item--fast::before {
+    margin-left: -47px;
+  }
+  .advantages__item--awesome::before {
+    margin-left: -44px;
+  }
+  .advantages__item--expensive {
+    border-right: none;
+  }
+  .advantages__item--expensive::before {
+    margin-left: -45.5px;
   }
   .advantages__item-title {
     text-align: center;
@@ -591,6 +630,7 @@ table {
   width: 100%;
   height: 32px;
   background-color: #242424;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
 .news__wrapper {
   width: auto;
@@ -653,6 +693,9 @@ table {
 .news__link:hover .news__date {
   background-color: #826550;
 }
+.news__link:hover .news__date::after {
+  border-top-color: #826550;
+}
 .news__link:active {
   color: #6a4d38;
   text-decoration: underline;
@@ -660,6 +703,9 @@ table {
 .news__link:active .news__date {
   color: #978374;
   background-color: #6a4d38;
+}
+.news__link:active .news__date::after {
+  border-top-color: #6a4d38;
 }
 .news__date {
   position: absolute;
@@ -678,6 +724,17 @@ table {
 .news__date b {
   font-size: 30px;
   line-height: 25px;
+}
+.news__date::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 12px solid #000000;
 }
 .news__item:nth-child(n + 3) {
   display: none;
@@ -1390,6 +1447,21 @@ table {
   color: #ffffff;
 }
 @media (max-width: 767px) {
+  .page-footer {
+    position: relative;
+  }
+  .page-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 32px;
+    background-color: #f8f5f2;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
+  .page-footer--inner-photo::before {
+    background-color: #353535;
+  }
   .page-footer__contacts a {
     width: auto;
     margin-top: 20px;
@@ -1951,11 +2023,20 @@ table {
   }
 }
 .price {
-  color: #ffffff;
-  background-color: #353535;
-  box-shadow: 0 0 5px #666666;
+  position: relative;
   padding-top: 70px;
   padding-bottom: 19px;
+  color: #ffffff;
+  background-color: #353535;
+}
+.price::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 32px;
+  background-color: #f8f5f2;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
 .price__wrapper {
   margin-left: 20px;
@@ -2017,9 +2098,10 @@ table {
   left: 20px;
   width: 57px;
   height: 57px;
-  transform: translateY(-50%);
-  border: 2px solid #ffffff;
   border-radius: 50%;
+  background-image: url(../../img/clock-illustration.svg);
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
 }
 .price__discount-desc {
   margin: 0;
@@ -2031,6 +2113,9 @@ table {
   .price {
     padding-top: 85px;
     padding-bottom: 56px;
+  }
+  .price::before {
+    height: 41px;
   }
   .price__wrapper {
     width: auto;
@@ -2123,6 +2208,9 @@ table {
   .price {
     padding-top: 75px;
     padding-bottom: 85px;
+  }
+  .price::before {
+    content: none;
   }
   .price__columns {
     display: flex;
