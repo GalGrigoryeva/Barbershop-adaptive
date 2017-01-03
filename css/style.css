@@ -1370,7 +1370,7 @@ table {
 @media (min-width: 768px) {
   .order {
     width: auto;
-    padding-top: 54px;
+    padding-top: 58px;
     padding-bottom: 76px;
   }
   .order__header {
@@ -1402,7 +1402,6 @@ table {
 }
 @media (min-width: 1200px) {
   .order {
-    padding-top: 58px;
     padding-bottom: 87px;
   }
 }
@@ -1748,7 +1747,7 @@ table {
     /*
     @media @retina {
       background-image: url("img/bg-header@2x.jpg");
-      background-size: 1338px auto; указывается размер нормальной картинки
+      background-size: 1338px auto; //указывается размер нормальной картинки
     }
     */
   }
@@ -1759,6 +1758,32 @@ table {
     width: 370px;
     height: auto;
     transform: translateX(-50%);
+  }
+  .page-header__logo--inner {
+    height: 214px;
+  }
+  .page-header__logo--inner img {
+    bottom: 73px;
+  }
+  .page-header__logo--inner::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 40px;
+    background-color: #f8f5f2;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+  }
+  .page-header__logo--inner::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 40px;
+    background-color: #f8f5f2;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
   }
 }
 @media (min-width: 1200px) {
@@ -1772,6 +1797,16 @@ table {
   }
   .page-header__logo img {
     bottom: 438px;
+  }
+  .page-header__logo--inner {
+    height: 307px;
+  }
+  .page-header__logo--inner img {
+    bottom: 99px;
+  }
+  .page-header__logo--inner::before,
+  .page-header__logo--inner::after {
+    height: 64px;
   }
 }
 .portfolio {
@@ -1840,6 +1875,7 @@ table {
 .portfolio__foto {
   position: relative;
   top: -1px;
+  left: -1px;
   display: block;
   margin: 0 auto 25px;
   z-index: 2;
@@ -1858,7 +1894,7 @@ table {
 .portfolio__service-list {
   margin: 0;
   padding: 0;
-  padding-left: 20px;
+  padding-left: 22px;
   list-style: none;
 }
 .portfolio__service-item {
@@ -1875,12 +1911,41 @@ table {
   content: "";
   position: absolute;
   left: 0;
+  top: 2px;
+  background-repeat: no-repeat;
+}
+.portfolio__service-item--cut {
+  padding-left: 36px;
+}
+.portfolio__service-item--cut::before {
+  width: 21px;
+  height: 20px;
+  background-image: url("../../img/scissors-icon.svg");
+}
+.portfolio__service-item--beard {
+  margin-right: 35px;
+  padding-left: 44px;
+}
+.portfolio__service-item--beard::before {
+  width: 23px;
+  height: 21px;
+  background-image: url("../../img/beard-icon.svg");
+}
+.portfolio__service-item--mustache {
+  padding-left: 45px;
+}
+.portfolio__service-item--mustache::before {
+  left: -13px;
+  top: 6px;
+  width: 45px;
+  height: 12px;
+  background-image: url("../../img/mustache-icon.svg");
 }
 @media (min-width: 768px) {
   .portfolio {
     width: auto;
     padding-bottom: 63px;
-    padding-top: 95px;
+    padding-top: 58px;
   }
   .portfolio__header {
     display: flex;
@@ -1940,6 +2005,7 @@ table {
   .portfolio__service-list {
     margin-top: auto;
     margin-bottom: 20px;
+    padding-left: 0;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
@@ -1964,7 +2030,6 @@ table {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 79px;
-    padding-top: 120px;
   }
   .portfolio__header {
     width: 100%;
@@ -1973,7 +2038,7 @@ table {
   .portfolio__item {
     flex-direction: column;
     width: 292px;
-    height: 539px;
+    height: auto;
     margin: 0;
   }
   .portfolio__item:nth-of-type(2) {
@@ -2001,6 +2066,8 @@ table {
     /* 34 / 768 ~= 4.43% */
     margin-top: 130px;
     padding: 0;
+  }
+  .portfolio__item--work-of-month .portfolio__feedback {
     padding-right: 130px;
   }
   .portfolio__item--work-of-month .portfolio__service-list {
@@ -2011,14 +2078,13 @@ table {
     margin-bottom: 34px;
   }
   .portfolio__desc {
+    flex-grow: 1;
     margin: 0;
     padding: 0;
     padding-left: 30px;
     padding-right: 30px;
   }
   .portfolio__service-list {
-    position: absolute;
-    bottom: 0;
     margin-bottom: 10px;
   }
 }
@@ -2106,7 +2172,7 @@ table {
 .price__discount-desc {
   margin: 0;
   padding: 0;
-  padding-right: 45px;
+  padding-right: 35px;
   font-size: 20px;
 }
 @media (min-width: 768px) {
