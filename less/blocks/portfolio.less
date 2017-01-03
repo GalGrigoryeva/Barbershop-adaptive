@@ -109,7 +109,7 @@
 .portfolio__service-list {
   margin: 0;
   padding: 0;
-  padding-left: 20px;
+  padding-left: 22px;
 
   list-style: none;
 }
@@ -129,6 +129,45 @@
     content: "";
     position: absolute;
     left: 0;
+    top: 2px;
+
+    background-repeat: no-repeat;
+  }
+}
+
+.portfolio__service-item--cut {
+  padding-left: 36px;
+
+  &::before {
+    width: 21px;
+    height: 20px;
+
+    background-image: url("../../img/scissors-icon.svg");
+  }
+}
+
+.portfolio__service-item--beard {
+  margin-right: 35px;
+  padding-left: 44px;
+
+  &::before {
+    width: 23px;
+    height: 21px;
+
+    background-image: url("../../img/beard-icon.svg");
+  }
+}
+
+.portfolio__service-item--mustache {
+  padding-left: 45px;
+
+  &::before {
+    left: -13px;
+    top: 6px;
+    width: 45px;
+    height: 12px;
+
+    background-image: url("../../img/mustache-icon.svg");
   }
 }
 
@@ -212,6 +251,7 @@
   .portfolio__service-list {
     margin-top: auto;
     margin-bottom: 20px;
+    padding-left: 0;
   }
 }
 
@@ -231,7 +271,7 @@
   .portfolio__item {
     flex-direction: column;
     width: 292px;
-    height: 539px;
+    height: auto;
     margin: 0;
 
     &:nth-of-type(2){
@@ -264,6 +304,9 @@
       margin-left: 4.43%; /* 34 / 768 ~= 4.43% */
       margin-top: 130px;
       padding: 0;
+    }
+
+    .portfolio__feedback {
       padding-right: 130px;
     }
 
@@ -278,6 +321,7 @@
   }
 
   .portfolio__desc {
+    flex-grow: 1;
     margin: 0;
     padding: 0;
     padding-left: 30px;
@@ -285,8 +329,6 @@
   }
 
   .portfolio__service-list {
-    position: absolute;
-    bottom: 0;
     margin-bottom: 10px;
   }
 }
