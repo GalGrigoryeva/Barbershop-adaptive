@@ -41,7 +41,7 @@
     /*
     @media @retina {
       background-image: url("img/bg-header@2x.jpg");
-      background-size: 1338px auto; указывается размер нормальной картинки
+      background-size: 1338px auto; //указывается размер нормальной картинки
     }
     */
   }
@@ -55,6 +55,36 @@
     height: auto;
 
     transform: translateX(-50%);
+  }
+
+  .page-header__logo--inner {
+    height: 214px;
+
+    img {
+      bottom: 73px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      height: 40px;
+      background-color: @bg-lightgrey;
+      clip-path: polygon(0 100%, 100% 100%, 100% 0);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      height: 40px;
+      background-color: @bg-lightgrey;
+      clip-path: polygon(0 0, 100% 100%, 0 100%);
+    }
   }
 }
 
@@ -72,5 +102,18 @@
 
   .page-header__logo img {
     bottom: 438px;
+  }
+
+  .page-header__logo--inner {
+    height: 307px;
+
+    img {
+      bottom: 99px;
+    }
+
+    &::before,
+    &::after {
+      height: 64px;
+    }
   }
 }
