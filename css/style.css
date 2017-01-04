@@ -2784,3 +2784,281 @@ table {
     width: 640px;
   }
 }
+.modal-content {
+  position: fixed;
+  left: 50%;
+  top: 136px;
+  display: none;
+  width: 320px;
+  margin-left: -160px;
+  padding: 32px 20px 37px;
+  box-sizing: border-box;
+  color: #000;
+  background: #f8f5f2;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+  z-index: 50;
+}
+.modal-content-show {
+  display: block;
+}
+.modal-content__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.modal-content p {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 18px;
+  text-align: center;
+}
+.modal-content__field {
+  width: 100%;
+  margin-bottom: 6px;
+  padding: 11px 16px;
+  padding-right: 50px;
+  box-sizing: border-box;
+  border: 1px solid #e5ddd5;
+  background-color: #ffffff;
+  outline: none;
+}
+.modal-content__field::-webkit-input-placeholder {
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  color: #000000;
+  opacity: 1;
+}
+.modal-content__field:-moz-placeholder {
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  color: #000000;
+  opacity: 1;
+}
+.modal-content__field::-moz-placeholder {
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  color: #000000;
+  opacity: 1;
+}
+.modal-content__field:-ms-input-placeholder {
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  color: #000000;
+  opacity: 1;
+}
+.modal-content__field:hover {
+  border-color: #d5c9bd;
+}
+.modal-content__field:focus {
+  border-color: #999999;
+}
+.modal-content__field--icon-user {
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+  background-position: 245px 16px;
+}
+.modal-content__field--icon-password {
+  margin-bottom: 26px;
+  background-image: url("../img/locked.svg");
+  background-repeat: no-repeat;
+  background-position: 245px 16px;
+}
+.modal-content__chekbox {
+  display: none;
+}
+.modal-content__checkbox-label {
+  position: relative;
+  padding-left: 48px;
+  cursor: pointer;
+}
+.modal-content__checkbox-label:hover {
+  color: #826550;
+}
+.modal-content__checkbox-label:active {
+  color: #6a4d38;
+}
+.modal-content__checkbox-indicator {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 33px;
+  height: 33px;
+  box-sizing: border-box;
+  border: 1px solid #e5ddd5;
+  background-color: #ffffff;
+}
+.modal-content__chekbox:checked + .modal-content__checkbox-indicator::before,
+.modal-content__chekbox:checked + .modal-content__checkbox-indicator::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 3px;
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+}
+.modal-content__chekbox:checked + .modal-content__checkbox-indicator::before {
+  transform: rotate(45deg);
+}
+.modal-content__chekbox:checked + .modal-content__checkbox-indicator::after {
+  transform: rotate(-45deg);
+}
+.modal-content__restore {
+  float: right;
+  font-size: 18px;
+  color: #000000;
+}
+.modal-content__btn--login {
+  display: inline-block;
+  width: 130px;
+  height: 50px;
+  margin-top: 29px;
+  margin-right: 16px;
+  padding: 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  background-color: #826550;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.modal-content__btn--login:hover {
+  background-color: #6a4d38;
+}
+.modal-content__btn--login:active {
+  color: #978374;
+  background-color: #6a4d38;
+}
+.modal-content__btn--login:disabled {
+  color: #ffffff;
+  background-color: #aeaeae;
+}
+@media (max-width: 767px) {
+  .modal-content__extra-text {
+    display: none;
+  }
+  .modal-content__btn--close {
+    display: inline-block;
+    width: 130px;
+    height: 50px;
+    padding: 0;
+    margin-top: 29px;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000000;
+    background-color: #f8f5f2;
+    border: 1px solid #e5ddd5;
+    outline: none;
+    cursor: pointer;
+  }
+  .modal-content__btn--close:hover {
+    border-color: #d5cabe;
+  }
+  .modal-content__btn--close:active {
+    color: #958c84;
+    border-color: #d5cabe;
+    background-color: #d5cabe;
+  }
+  .modal-content__btn--close:disabled {
+    cursor: default;
+    color: #ffffff;
+    border-color: #aeaeae;
+    background-color: #aeaeae;
+  }
+}
+@media (min-width: 768px) {
+  .modal-content {
+    top: 129px;
+    left: 50%;
+    width: 460px;
+    margin-left: -230px;
+    padding: 53px 70px 57px;
+  }
+  .modal-content__title {
+    margin-bottom: 12px;
+    font-size: 40px;
+  }
+  .modal-content__field {
+    padding: 21px 24px 19px;
+    padding-right: 65px;
+    box-sizing: border-box;
+    border: 1px solid #e5ddd5;
+    background-color: #ffffff;
+    outline: none;
+  }
+  .modal-content__field::-webkit-input-placeholder {
+    font-size: 24px;
+  }
+  .modal-content__field:-moz-placeholder {
+    font-size: 24px;
+  }
+  .modal-content__field::-moz-placeholder {
+    font-size: 24px;
+  }
+  .modal-content__field:-ms-input-placeholder {
+    font-size: 24px;
+  }
+  .modal-content__field--icon-user {
+    background-position: 280px 26px;
+  }
+  .modal-content__field--icon-password {
+    background-position: 280px 26px;
+  }
+  .modal-content__btn--login {
+    display: block;
+    width: 100%;
+    margin-top: 33px;
+    margin-right: 0;
+  }
+  .modal-content__btn--close {
+    position: absolute;
+    top: 62px;
+    right: -77px;
+    width: 26px;
+    height: 26px;
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+  }
+  .modal-content__btn--close::before,
+  .modal-content__btn--close::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: -5px;
+    width: 36px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #ffffff;
+  }
+  .modal-content__btn--close::before {
+    transform: rotate(45deg);
+  }
+  .modal-content__btn--close::after {
+    transform: rotate(-45deg);
+  }
+}
