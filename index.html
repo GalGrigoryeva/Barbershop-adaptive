@@ -35,6 +35,22 @@
         </ul>
       </div>
     </nav>
+    <div class="modal-content">
+      <h2 class="modal-content__title">Личный кабинет</h2>
+      <p>Введите свой логин и пароль, чтобы войти</p>
+      <form class="modal-content__login-form" action="https://echo.htmlacademy.ru" method="post">
+        <input class="modal-content__field  modal-content__field--icon-user" type="text" name="login" placeholder="Логин">
+        <input class="modal-content__field  modal-content__field--icon-password" type="password" name="password" placeholder="Пароль">
+        <label class="modal-content__checkbox-label">
+          <input class="modal-content__chekbox" type="checkbox" name="remember">
+          <span class="modal-content__checkbox-indicator"></span>
+          Запомните меня
+        </label>
+        <a class="modal-content__restore" href="#">Я забыл пароль!</a>
+        <button class="modal-content__btn--login" type="submit">Войти<span class="modal-content__extra-text"> в личный кабинет</span></button>
+        <button class="modal-content__btn--close" type="button" title="Закрыть">Закрыть</button>
+      </form>
+    </div>
   </header>
   <main class="page-main">
     <section class="stats">
