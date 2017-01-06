@@ -1109,7 +1109,7 @@ table {
   border: 2px solid #000000;
   border-top: none;
   border-right: none;
-  background-color: #fffffff;
+  background-color: #ffffff;
   transform: rotate(-45deg);
   z-index: 2;
 }
@@ -1137,7 +1137,7 @@ table {
   border: 2px solid #000000;
   border-top: none;
   border-right: none;
-  background-color: #fffffff;
+  background-color: #ffffff;
   transform: rotate(-45deg);
   z-index: 2;
 }
@@ -1587,7 +1587,7 @@ table {
     text-align: center;
   }
   .page-footer__copyright {
-    position: none;
+    position: static;
     display: inline-block;
     width: 160px;
     margin-left: -4px;
@@ -2507,7 +2507,7 @@ table {
     margin-right: 6px;
     border: 1px solid #3e3e3e;
   }
-  .social-link:nth-last-child {
+  .social-link:nth-last-child(1) {
     margin-right: 0;
   }
   .social-link:hover {
