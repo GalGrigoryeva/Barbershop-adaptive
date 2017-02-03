@@ -2,9 +2,9 @@
 Training project from https://htmlacademy.ru/
 
 ## Features:  
- * Rsponsive/Adaptive Web Design   
+ * Responsive/Adaptive web design   
  * Semantic HTML   
  * Adaptive images 
- * Progressive Enhancement   
+ * Progressive enhancement   
  * Mobile first     
  * BEM
